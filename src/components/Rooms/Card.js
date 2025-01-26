@@ -1,23 +1,24 @@
 import React from "react"
 
-const Card = (props) => {
+
+const Card = ({ item: {id, image, room, name, price}}) => {
   return (
     <>
-    <div className='box'>
-        <i className='fa fa-quote-left'></i>
-        <div className='para'>
-            <p>{props.desc}</p>
-        </div>
-        <hr />
-        <div className='details flex'>
-            <div className='img'>
-                <img src={props.profile} alt='' />
-            </div>
-            <div className='name'>
-                <h3>{props.name}</h3>
-                <span>{props.post}</span>
-            </div>
-        </div>
+    <div className="items">
+      <div className="img">
+        <img src={image} alt='' />
+      </div>
+      <div className='category flex_space'>
+        <span>{id}</span>
+        <label>{room}</label>
+      </div>
+
+      <div className='details'>
+        <h3>{name}</h3>
+        <p>{price}</p>
+      </div>
+
+     
     </div>
     </>
   )

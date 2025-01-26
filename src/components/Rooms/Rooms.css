@@ -1,5 +1,11 @@
 .Rooms {
-  position: center;
+  position: relative;
+  padding: 20px;
+  display: flex;
+  flex-wrap: nowrap; /* Ensures all items stay on a single row */
+  justify-content: space-between; /* Distributes items evenly with equal spacing */
+  gap: 20px; /* Adds spacing between the items */
+  overflow-x: auto; /* Ensures scrollability if the container exceeds screen width */
 }
 
 .Rooms::after {
@@ -14,38 +20,40 @@
 }
 
 .Rooms img {
-  width: 100%;
+  width: 100%; /* Makes the image take up full width of its card */
+  height: 400px; /* Enlarges the image height */
+  object-fit: cover; /* Maintains aspect ratio */
+  border-radius: 10px; /* Adds smooth corners */
+  transform: translateY(10px); /* Adds a slight shift downward */
+  transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+.Rooms img:hover {
+  transform: translateY(0px); /* Resets the position on hover */
 }
 
 .Rooms .card {
-  margin: 10px;
-}
-
-.Rooms .item {
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 300px; /* Defines the width for each card */
 }
 
-.Rooms .imgae {
+.Rooms .image {
   position: relative;
-}
-
-.Rooms .imgae i {
-  position: absolute;
-  bottom: 0;
-  color: white;
-  margin: 20px;
-}
-
-.Rooms .imgae i label {
-  margin-left: 10px;
-  font-weight: normal;
+  text-align: center;
+  width: 100%; /* Ensures the image container takes up full width */
+  margin-bottom: 10px;
 }
 
 .Rooms .details {
   text-align: center;
+  margin-top: 10px;
 }
 
 .Rooms .rate {
@@ -60,85 +68,32 @@
   margin: 2px;
 }
 
-.Rooms .cards h2 {
-  font-weight: 500;
-  font-size: 20px;
-  color: #31b675;
-  position: relative;
-  margin-bottom: 30px;
-}
-
-.Rooms .cards h2::after {
-  position: absolute;
-  content: "";
-  bottom: -10px;
-  left: 45%;
-  height: 1px;
-  width: 30px;
-  background: black;
-}
-
-.Rooms .cards h2::before {
-  position: absolute;
-  content: "";
-  bottom: -20px;
-  left: 40%;
-  height: 1px;
-  width: 60px;
-  background: black;
-}
-
-.Rooms .cards h3 {
-  color: #31b675;
-  font-weight: 500;
-}
-
-.Rooms .cards h3 span {
-  color: grey;
-  font-weight: 300;
-  font-size: 15px;
-}
-
-.Rooms .content {
-  margin-bottom: 80px;
-}
-
-/*----- control btn -------*/
-.Rooms .control-btn .next,
-.Rooms .control-btn .prev {
-  top: 100%;
-  background: none;
-}
-
-.Rooms .control-btn .prev {
-  left: 45%;
-}
-
-.Rooms .control-btn .next {
-  right: 45%;
-}
-
-.Rooms .control-btn .prev i,
-.Rooms .control-btn .next i {
-  background: rgba(0, 0, 0, 0.05);
-  color: black;
-  font-size: 15px;
-  transition: 0.5s;
-}
-
-.Rooms .control-btn .prev i:hover,
-.Rooms .control-btn .next i:hover {
-  background: #31b675;
-  color: white;
-}
-
-/*----- control btn -------*/
-@media screen and (max-width: 768px) {
-  .Rooms .control-btn .prev {
-    left: 40%;
+/* Responsive adjustments */
+@media screen and (max-width: 1200px) {
+  .Rooms {
+    gap: 15px; /* Adjusts spacing for smaller screens */
   }
 
-  .Rooms .control-btn .next {
-    right: 42%;
+  .Rooms .card {
+    width: 250px; /* Adjusts card width on smaller screens */
+  }
+
+  .Rooms img {
+    height: 350px; /* Adjusts image height for smaller screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Rooms {
+    flex-wrap: wrap; /* Allows wrapping to stack items on smaller screens */
+    justify-content: center; /* Centers items */
+  }
+
+  .Rooms .card {
+    width: 90%; /* Makes the cards take up more space */
+  }
+
+  .Rooms img {
+    height: 300px; /* Adjusts image size for mobile screens */
   }
 }
