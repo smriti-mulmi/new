@@ -2,7 +2,7 @@ import React from "react"
 import HeadTitle from "../../common/HeadTitle/HeadTitle"
 import AllItem from "./AllItem"
 
-const Testimonial = () => {
+const Rooms = () => {
   return (
     <>
         <HeadTitle />
@@ -11,4 +11,4 @@ const Testimonial = () => {
   )
 }
 
-export default Testimonial
+export default Rooms

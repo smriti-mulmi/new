@@ -9,7 +9,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import SinglePages from "./SinglePage/SinglePages"
 import Blog from "./components/Blog/Blog"
 import BlogSingle from "./components/Blog/blog-single-page/BlogSingle"
-import Testimonial from "./components/Testimonial/Testimonial"
+import Rooms from "./components/Rooms/Rooms"
 import Contact from "./components/Contact/Contact"
 import Login from "./components/login/Login"
 import Register from "./components/login/Register"
@@ -28,7 +28,7 @@ function App () {
           <Route path="/singlepage/:id" element={<SinglePages />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blogsingle/:id" element={<BlogSingle />} />
-          <Route path="/testimonial" element={<Testimonial />} />
+          <Route path="/room" element={<Rooms />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/sign-in" element={<Login />} />
           <Route path="/register" element={<Register />} />
