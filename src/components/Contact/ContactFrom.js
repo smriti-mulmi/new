@@ -111,7 +111,6 @@ const ContactFrom = () => {
                 <br />
                 <span>+977-9841688701</span>
                 <br />
-
                 <div className='icon'>
                     <h3>Follow Us</h3>
                     <div className='flex_space'>
