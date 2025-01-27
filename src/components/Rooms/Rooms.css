@@ -1,10 +1,10 @@
 .Rooms {
-  position: relative;
+  position: center;
   padding: 20px;
   display: flex;
   flex-wrap: nowrap; /* Ensures all items stay on a single row */
   justify-content: space-between; /* Distributes items evenly with equal spacing */
-  gap: 20px; /* Adds spacing between the items */
+  gap: 100px; /* Adds spacing between the items */
   overflow-x: auto; /* Ensures scrollability if the container exceeds screen width */
 }
 
@@ -29,7 +29,7 @@
 }
 
 .Rooms img:hover {
-  transform: translateY(0px); /* Resets the position on hover */
+  transform: translateY(10px); /* Resets the position on hover */
 }
 
 .Rooms .card {
