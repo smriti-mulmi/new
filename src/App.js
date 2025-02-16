@@ -14,6 +14,8 @@ import Contact from "./components/Contact/Contact"
 import Login from "./components/login/Login"
 import Register from "./components/login/Register"
 import Footer from "./common/footer/Footer"
+import Bookingscreen from "./screens/Bookingscreen";
+import Landingscreen from "./screens/Landingscreen";
 
 function App () {
   return (
@@ -32,6 +34,7 @@ function App () {
           <Route path="/contact" element={<Contact />} />
           <Route path="/sign-in" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/book/:roomid/:fromdate/:todate" component={Bookingscreen}/>
         </Routes>
         <Footer />
       </Router>
