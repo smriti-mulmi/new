@@ -1,6 +1,9 @@
 import React, { useState , useEffect } from "react";
 import { Modal, Carousel } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import Loader from '../Loader';
+import Error from '../Error';
+
 
 function Room({ room, fromdate, todate }) {
   

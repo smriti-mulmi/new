@@ -1,9 +1,9 @@
 import React , {useState , useEffect} from 'react'
 import axios from "axios";
 import Swal from "sweetalert2";
-import Error from "../components/Error";
-import Loader from "../components/Loader";
-import Success from "../components/Success";
+import Error from "./Error";
+import Loader from "./Loader";
+import Success from "./Success";
 function Bookings() {
   const [bookings, setbookings] = useState([]);
   const [loading, setloading] = useState(false);
